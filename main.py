@@ -9,7 +9,7 @@ load_dotenv()
 api_key=os.getenv('RIOT_API_KEY')
 
 
-# try3: add to debug unknown api key error (when run in Terminal)
+# Try3: add to debug unknown api key error (when run in Terminal)
 print(f"API Key loaded: {api_key}")
 
 if not api_key:
@@ -26,7 +26,7 @@ headers = {"X-Riot-Token": api_key}
 account_response = requests.get(account_url, headers=headers)
 
 
-# try2: print to debug
+# Try2: print to debug
 print("Response:", account_response.json())
 
 puuid = account_response.json()['puuid']
@@ -37,7 +37,7 @@ match_ids_response = requests.get(match_ids_url, headers=headers)
 match_ids = match_ids_response.json()
 
 
-# try4: add print lines to debug potential API error (list? dict/?)
+# Try4: add print lines to debug potential API error (list? dict/?)
 print("Match IDs response:", match_ids)
 print("Type:", type(match_ids))
 
