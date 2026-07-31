@@ -9,7 +9,7 @@ load_dotenv()
 api_key=os.getenv('RIOT_API_KEY')
 
 
-# Try3: add to debug unknown api key error (when run in Terminal)
+# Try3: add to debug unknown api key error (when code being run in Terminal)
 print(f"API Key loaded: {api_key}")
 
 if not api_key:
